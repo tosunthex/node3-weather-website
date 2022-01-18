@@ -11,7 +11,7 @@ const forecast = (longitude,latitude, callback) => {
             callback(body.error.info, undefined);
         }
         else {
-            callback('', 'In ' + body.location.name + ' it\'s currently ' + body.current.weather_descriptions[0] + ' ' + body.current.temperature + ' degrees out and feels like ' + body.current.feelslike);
+            callback('', 'In ' + body.location.name + ' it\'s currently ' + body.current.weather_descriptions[0] + ' ' + body.current.temperature + ' degrees out and feels like ' + body.current.feelslike + ' Humidity : ' + body.current.humidity);
         }
     });
 };
